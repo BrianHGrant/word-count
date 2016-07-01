@@ -14,4 +14,10 @@ describe('String#word_count') do
   it("will return number of matches for string that contains single word multiple times") do
     expect(("cashew").word_count("Cheese made from cashew nuts has lead to the rise in popularity of the cashew nut.")).to(eq(2))
   end
+  it("will handle uppercase and lowercase as same word") do
+    expect(("tofurky").word_count("TOFURKY Tofurky tofurky TofUrKy")).to(eq(4))
+  end
+  it("will handle punctuation and non-alphanumeric by stripping and looking at the words") do
+    expect(("tofurky").word_count("TOFURKY. Tofurky. %tofurky &%^&%^TofUrKy")).to(eq(4))
+  end
 end
