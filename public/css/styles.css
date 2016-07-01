@@ -29,6 +29,12 @@ h1 {
   font-size: 1.3em;
 }
 
-#result_box {
+#submit-button {
+  margin-left: 45%;
+  margin-right: 45%;
+}
 
+#reset_button {
+  margin-left: 45%;
+  margin-right: 45%;
 }
